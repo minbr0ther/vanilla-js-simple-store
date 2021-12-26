@@ -3,7 +3,7 @@
  * 그리고 발행기관을 구독 한다.
  */
 
-class Subscriber {
+export default class Subscriber {
   #fn;
 
   constructor(발행기관에_변화가_생길_때_하는_일) {
