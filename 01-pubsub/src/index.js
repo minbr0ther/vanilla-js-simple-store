@@ -7,7 +7,7 @@ const component2 = new Component({ subscribe: [store] });
 
 // 컴포넌트가 store을 구독한다.
 component1.subscribe(store); // a + b = ${store.state.a + store.state.b}
-component2.subscribe(store); // a + b = ${store.state.a + store.state.b}
+component2.subscribe(store); // a * b = ${store.state.a * store.state.b}
 
 // store의 state를 변경한다.
 store.setState({ a: 100, b: 200 });
