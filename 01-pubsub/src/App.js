@@ -17,7 +17,7 @@ export class App extends Component {
   template() {
     return `
         ${InputA()}
-        ${InputA()}
+        ${InputB()}
         ${Calculator()}
     `;
   }
