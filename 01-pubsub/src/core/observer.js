@@ -8,6 +8,7 @@ export const observe = (fn) => {
 
 export const observable = (obj) => {
   Object.keys(obj).forEach((key) => {
+    // ['a','b']
     let _value = obj[key];
 
     // 이제 여러 개의 observer를 만들어서 관리해보자.
@@ -31,6 +32,7 @@ export const observable = (obj) => {
       },
     });
   });
+
   return obj;
 };
 

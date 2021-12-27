@@ -6,7 +6,7 @@ const app = document.querySelector('#app');
 
 const render = () => {
   app.innerHTML = /*html*/ `
-        <p>a + b ${state.a + state.b}</p>
+        <p>a + b = ${state.a + state.b}</p>
         <input id="stateA" value="${state.a}"/>
         <input id="stateB" value="${state.b}"/>
     `;
