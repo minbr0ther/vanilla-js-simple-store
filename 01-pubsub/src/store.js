@@ -1,16 +1,18 @@
-import { observable } from './core/observer.js';
+import { Store } from './core/Store.js';
 
-export const store = {
-  state: observable({ a: 10, b: 20 }),
+export const store = new Store({
+  state: { a: 10, b: 20 },
 
-  setState(newState) {
-    // 새로운 상태의 key 와 value를 순회한다
-    for (const [key, value] of Object.entries(newState)) {
-      // 기존의 상태에 있는 key는 무시한다
-      if (!this.state[key]) continue;
+  // state의 값은 오직 mutations를 통해서 변경할 수 있다.
+  mutations: {
+    SET_A(state, payload) {
+      state.a = payload;
+    },
 
-      // 새로운 key와 value를 상태에 등록한다
-      this.state[key] = value;
-    }
+    SET_B(state, payload) {
+      state.b = payload;
+    },
   },
-};
+
+  // actions도 있으면 좋겠지만.. 딱히 지금 쓸만한 API가 없다.
+});
